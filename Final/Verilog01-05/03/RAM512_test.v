@@ -1,0 +1,118 @@
+`include "RAM512.v"
+
+module main;
+    reg signed[15:0] in;
+    reg load,clk;
+    reg[8:0] address;
+    wire signed[15:0] out;
+
+RAM512 g0(in,load,address,clk,out);
+
+initial begin
+
+    $display("---------------------RAM512--------------------------");
+    $display("|  Time  |  in   |  load  | address |  clk  |  out  |");
+    $display("-----------------------------------------------------");
+    $monitor("|%4dns  |%-7d| %3d    |   %d   |%4d   |%7d|",$stime,in,load,address,clk,out);
+    in=0;load=0;clk=0;address=0;
+    #10 in=-16'd12321;load=1;address=9'd0;
+    #10 in=16'd12321;load=1;address=9'd10;
+    #10 in=-16'd12321;load=1;address=9'd20;
+    #10 in=16'd12321;load=1;address=9'd30;
+    #10 in=-16'd12321;load=1;address=9'd40;
+    #10 in=16'd12321;load=1;address=9'd60;
+    #10 in=16'd12321;load=1;address=9'd80;
+    #10 in=16'd12321;load=1;address=9'd100;
+    #10 in=16'd12321;load=1;address=9'd120;
+    #10 in=16'd12321;load=1;address=9'd140;
+    #10 in=16'd12321;load=1;address=9'd161;
+    #10 in=16'd12321;load=1;address=9'd182;
+    #10 in=16'd12321;load=1;address=9'd205;
+    #10 in=16'd12321;load=1;address=9'd226;
+    #10 in=16'd12321;load=1;address=9'd249;
+    #10 in=-16'd12321;load=1;address=9'd260;
+    #10 in=-16'd12321;load=1;address=9'd288;
+    #10 in=-16'd12321;load=1;address=9'd307;
+    #10 in=16'd12321;load=1;address=9'd329;
+    #10 in=16'd12321;load=1;address=9'd344;
+    #10 in=16'd12321;load=1;address=9'd360;
+    #10 in=16'd12321;load=1;address=9'd388;
+    #10 in=-16'd12321;load=1;address=9'd404;
+    #10 in=16'd12321;load=1;address=9'd428;
+    #10 in=16'd12321;load=1;address=9'd449;
+    #10 in=-16'd12321;load=1;address=9'd466;
+    #10 in=16'd12321;load=1;address=9'd488;
+    #10 in=-16'd12321;load=1;address=9'd501;
+    #10 in=16'd12321;load=1;address=9'd503;
+    #10 in=16'd12321;load=1;address=9'd509;
+    #10 in=-16'd12321;load=1;address=9'd510;
+    #10 in=-16'd12321;load=1;address=9'd511;
+    #5 in=0;load=0;address=9'd0;
+    #5 in=0;load=0;address=9'd1;
+    #5 in=0;load=0;address=9'd10;
+    #5 in=0;load=0;address=9'd12;
+    #5 in=0;load=0;address=9'd20;
+    #5 in=16'd12321;load=0;address=9'd30;
+    #5 in=16'd12321;load=0;address=9'd33;
+    #5 in=-16'd12321;load=0;address=9'd40;
+    #5 in=16'd12321;load=0;address=9'd41;
+    #5 in=16'd12321;load=0;address=9'd60;
+    #5 in=16'd12321;load=0;address=9'd66;
+    #5 in=16'd12321;load=0;address=9'd80;
+    #5 in=16'd12321;load=0;address=9'd83;
+    #5 in=16'd12321;load=0;address=9'd100;
+    #5 in=16'd12321;load=0;address=9'd99;
+    #5 in=16'd12321;load=0;address=9'd120;
+    #5 in=16'd12321;load=0;address=9'd121;
+    #5 in=16'd12321;load=0;address=9'd140;
+    #5 in=16'd12321;load=0;address=9'd144;
+    #5 in=16'd12321;load=0;address=9'd161;
+    #5 in=16'd12321;load=0;address=9'd160;
+    #5 in=16'd12321;load=0;address=9'd182;
+    #5 in=16'd12321;load=0;address=9'd178;
+    #5 in=16'd12321;load=0;address=9'd205;
+    #5 in=16'd12321;load=0;address=9'd208;
+    #5 in=16'd12321;load=0;address=9'd226;
+    #5 in=16'd12321;load=0;address=9'd229;
+    #5 in=16'd12321;load=0;address=9'd249;
+    #5 in=16'd12321;load=0;address=9'd250;
+    #5 in=-16'd12321;load=0;address=9'd260;
+    #5 in=16'd12321;load=0;address=9'd263;
+    #5 in=-16'd12321;load=0;address=9'd288;
+    #5 in=16'd12321;load=0;address=9'd289;
+    #5 in=-16'd12321;load=0;address=9'd307;
+    #5 in=16'd12321;load=0;address=9'd306;
+    #5 in=16'd12321;load=0;address=9'd329;
+    #5 in=16'd12321;load=0;address=9'd327;
+    #5 in=16'd12321;load=0;address=9'd344;
+    #5 in=16'd12321;load=0;address=9'd346;
+    #5 in=16'd12321;load=0;address=9'd360;
+    #5 in=16'd12321;load=0;address=9'd364;
+    #5 in=16'd12321;load=0;address=9'd388;
+    #5 in=16'd12321;load=0;address=9'd389;
+    #5 in=-16'd12321;load=0;address=9'd404;
+    #5 in=16'd12321;load=0;address=9'd403;
+    #5 in=16'd12321;load=0;address=9'd428;
+    #5 in=16'd12321;load=0;address=9'd427;
+    #5 in=16'd12321;load=0;address=9'd449;
+    #5 in=16'd12321;load=0;address=9'd447;
+    #5 in=-16'd12321;load=0;address=9'd466;
+    #5 in=16'd12321;load=0;address=9'd469;
+    #5 in=16'd12321;load=0;address=9'd488;
+    #5 in=16'd12321;load=0;address=9'd488;
+    #5 in=-16'd12321;load=0;address=9'd501;
+    #5 in=16'd12321;load=0;address=9'd502;
+    #5 in=16'd12321;load=0;address=9'd503;
+    #5 in=16'd12321;load=0;address=9'd503;
+    #5 in=16'd12321;load=0;address=9'd509;
+    #5 in=16'd12321;load=0;address=9'd510;
+    #5 in=-16'd12321;load=0;address=9'd510;
+    #5 in=0;load=0;address=9'd511;
+    #5 in=0;load=0;address=9'd511;
+    #5 in=16'd12321;load=0;address=9'd511;
+end
+always #5 begin
+    clk=~clk;
+end
+initial #636 $finish;
+endmodule
