@@ -2,7 +2,7 @@
 - Some of the test output answer refers from Nand2tetris ".out" file, ex: `And16_test.v`(mine) from `And16.out`(nand2tetris)
 - RAM4K,RAM8K,RAM16K,ROM32K refer from [CCC](https://gitlab.com/cccnqu111/co/-/tree/master/verilog/02-nand2tetris)
 - Makefile and 05/Computer_test.v refers from [CCC](https://gitlab.com/cccnqu111/co/-/blob/master/verilog/02-nand2tetris/computer_test.v)
-- Everything else was done by myself 100%
+- Everything else was done by myself 100% with the PPT at [nand2tetris](https://www.nand2tetris.org/course)
 
 # **心得**
 - 在修這堂課前我對計算機結構的想像是比較偏向理論類的，而且感覺就非常難學。但前面幾堂課的時候老師開始教一些基礎的邏輯閘的時候我其實覺得蠻簡單的，因為之前大一的時候就已經修過數位邏輯了。
